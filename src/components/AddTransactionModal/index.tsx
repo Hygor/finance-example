@@ -55,19 +55,23 @@ export function AddTransactionModal({
         <img src={closeImg} alt="close modal" />
       </button>
       <Container onSubmit={handleAddTransaction}>
-        <h2>bla</h2>
+        <h2>New Transaction</h2>
         <input
           value={title}
           onChange={ event => setTitle(event.target.value)}
           type="text"
           placeholder="title"
         />
-        <input
-          type="number"
-          placeholder="value"
-          value={amount}
-          onChange={ event => setAmount(Number(event.target.value))}
-        />
+        <label htmlFor="" className={'currencyInput'}>
+          <input
+            type="number"
+            min="0.00"
+            step="0.10"
+            placeholder="value"
+            value={amount}
+            onChange={ event => setAmount(Number(event.target.value))}
+          />
+        </label>
 
         <TransactionTypes>
           <RadioButton

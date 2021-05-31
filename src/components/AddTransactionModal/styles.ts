@@ -32,6 +32,27 @@ export const Container = styled.form`
     }
   }
 
+
+  .currencyInput {
+    position: relative;
+
+    input {
+      text-indent: 2em;
+    }
+
+    &:before {
+      font-weight: normal;
+      content: '€ ';
+      display: block;
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+      top: .8rem;
+      left: 1.24rem;
+      z-index: 1;
+    }
+  }
+
 `;
 
 export const TransactionTypes = styled.div`

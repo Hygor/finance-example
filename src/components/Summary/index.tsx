@@ -32,10 +32,10 @@ export function Summary() {
           <img src={incomeImg} alt="income" />
         </header>
         <strong>
-          { new Intl.NumberFormat('pt-BR',
+          { new Intl.NumberFormat('en',
             {
               style: 'currency',
-              currency: 'BRL'
+              currency: 'EUR'
             }).format(summary.deposits)
           }
         </strong>
@@ -47,10 +47,10 @@ export function Summary() {
           <img src={outcomeImg} alt="outcome" />
         </header>
         <strong>
-          { new Intl.NumberFormat('pt-BR',
+          { new Intl.NumberFormat('en',
             {
               style: 'currency',
-              currency: 'BRL'
+              currency: 'EUR'
             }).format(summary.withdraws)
           }
         </strong>
@@ -62,10 +62,10 @@ export function Summary() {
           <img src={totalImg} alt="total" />
         </header>
         <strong>
-          { new Intl.NumberFormat('pt-BR',
+          { new Intl.NumberFormat('en',
             {
               style: 'currency',
-              currency: 'BRL'
+              currency: 'EUR'
             }).format(summary.total)
           }
         </strong>

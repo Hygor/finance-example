@@ -21,9 +21,9 @@ export function TransactionsTable() {
           <tr key={ transaction.id }>
             <td>{ transaction.title }</td>
             <td className={ transaction.type === 'withdraw' ? 'withdraw' : 'deposit'}>
-              { new Intl.NumberFormat('pt-BR', {
+              { new Intl.NumberFormat('en', {
                 style: 'currency',
-                currency: 'BRL'
+                currency: 'EUR'
               }).format(transaction.amount) }
               <span>
                 { transaction.type === 'withdraw' ? ' -' : ' +' }
